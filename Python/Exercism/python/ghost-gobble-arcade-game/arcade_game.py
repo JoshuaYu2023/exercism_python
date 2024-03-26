@@ -2,14 +2,11 @@
 
 
 def eat_ghost(power_pellet_active, touching_ghost):
-    """Verify that Pac-Man can eat a ghost if he is empowered by a power pellet.
-
-    :param power_pellet_active: bool - does the player have an active power pellet?
-    :param touching_ghost: bool - is the player touching a ghost?
-    :return: bool - can the ghost be eaten?
-    """
-
-    pass
+    if power_pellet_active and touching_ghost:
+        eaten = True
+    else:
+        eaten = False
+    return eaten
 
 
 def score(touching_power_pellet, touching_dot):
