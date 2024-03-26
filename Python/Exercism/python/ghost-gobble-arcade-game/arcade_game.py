@@ -16,7 +16,7 @@ if touching_power_pellet or touching_dot:
     return point
 
 def lose(power_pellet_active, touching_ghost):
-   if touching_ghost == True and power_pellet_active != True:
+   if power_pellet_active != True:
            lost = True
        else:
            lost = False
