@@ -16,14 +16,11 @@ if touching_power_pellet or touching_dot:
     return point
 
 def lose(power_pellet_active, touching_ghost):
-    """Trigger the game loop to end (GAME OVER) when Pac-Man touches a ghost without his power pellet.
-
-    :param power_pellet_active: bool - does the player have an active power pellet?
-    :param touching_ghost: bool - is the player touching a ghost?
-    :return: bool - has the player lost the game?
-    """
-
-    pass
+   if touching_ghost == True and power_pellet_active != True:
+           lost = True
+       else:
+           lost = False
+       return lost
 
 
 def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
