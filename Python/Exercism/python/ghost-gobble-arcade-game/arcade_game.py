@@ -24,12 +24,8 @@ def lose(power_pellet_active, touching_ghost):
 
 
 def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
-    """Trigger the victory event when all dots have been eaten.
-
-    :param has_eaten_all_dots: bool - has the player "eaten" all the dots?
-    :param power_pellet_active: bool - does the player have an active power pellet?
-    :param touching_ghost: bool - is the player touching a ghost?
-    :return: bool - has the player won the game?
-    """
-
-    pass
+    if has_eaten_all_dots == True and not (power_pellet_active == False and touching_ghost == True):
+        huzzah = True
+    else:
+        huzzah = False
+    return huzzah
